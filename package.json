@@ -1,0 +1,50 @@
+{
+  "name": "graphql-middleware-prometheus",
+  "description": "Prometheus plugin for GraphQL Middleware",
+  "version": "0.0.0-semantic-release",
+  "files": [
+    "dist"
+  ],
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "typescript": {
+    "definition": "dist/index.d.ts"
+  },
+  "scripts": {
+    "prepublish": "npm run test",
+    "build": "rimraf dist && tsc -d",
+    "lint": "tslint --project tsconfig.json {src}/**/*.ts",
+    "test": "npm run lint && npm run build",
+    "semantic-release": "semantic-release"
+  },
+  "contributors": [
+    {
+      "name": "Simon DUJARDIN",
+      "email": "sdujardin@agaetis.fr",
+      "url": "https://github.com/orgs/Agaetis-IT"
+    }
+  ],
+  "devDependencies": {
+    "@types/lodash": "4.14.136",
+    "@types/node": "12.7.1",
+    "graphql": "14.4.2",
+    "graphql-middleware": "3.0.3",
+    "prom-client": "^11.5.3",
+    "rimraf": "2.6.3",
+    "semantic-release": "15.13.19",
+    "tslint": "5.18.0",
+    "tslint-config-prettier": "1.18.0",
+    "tslint-config-standard": "8.0.1",
+    "typescript": "3.5.3"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/simondujardin/graphql-middleware-prometheus"
+  },
+  "peerDependencies": {
+    "graphql": "^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0",
+    "graphql-middleware": "^2.0.0 || ^3.0.0",
+    "prom-client": "^11.5.3"
+  }
+}
